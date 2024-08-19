@@ -1,0 +1,48 @@
+<button type="button" data-e2e="follow-button" aria-label="Friends M.Zobayer.H🖤" class="e1bph0nm2 css-62byk8-Button-StyledFollowButtonV2 ehk74z00" style="line-height: 24px;">Friends</button><button type="button" data-e2e="follow-button" aria-label="Following Rodela Sharmin" class="e1bph0nm2 css-62byk8-Button-StyledFollowButtonV2 ehk74z00" style="line-height: 24px;">Following</button>
+<!-- 
+
+function bulkUnfollow() {
+	let stopUnfollowing = false;
+ 
+	function clickFollowButtons() {
+	  // Select all buttons with data-e2e="follow-button" and text content "Friends" or "Following"
+	  const followButtons = Array.from(document.querySelectorAll('button[data-e2e="follow-button"]'))
+		 .filter(button => button.textContent === 'Friends' || button.textContent === 'Following');
+ 
+	  if (followButtons.length === 0) {
+		 console.log('No follow buttons found');
+		 return;
+	  }
+ 
+	  // Function to click the follow button
+	  function clickFollowButton(button, index) {
+		 setTimeout(() => {
+			if (stopUnfollowing) {
+			  console.log('Unfollowing operation stopped');
+			  return;
+			}
+ 
+			button.click();
+			console.log(`Clicked follow button ${index + 1}`);
+		 }, index * 500); // Shorter delay between each action
+	  }
+ 
+	  // Loop through each follow button and click it
+	  followButtons.forEach((button, index) => {
+		 clickFollowButton(button, index);
+	  });
+ 
+	  // Scroll down to load more buttons
+	  setTimeout(() => {
+		 window.scrollBy(0, window.innerHeight);
+		 if (!stopUnfollowing) {
+			setTimeout(clickFollowButtons, 1000); // Repeat the process after a short delay
+		 }
+	  }, followButtons.length * 500 + 1000); // Adjust delay to ensure all buttons are clicked before scrolling
+	}
+ 
+	clickFollowButtons();
+ }
+ 
+ // Run the bulkUnfollow function
+ bulkUnfollow(); -->

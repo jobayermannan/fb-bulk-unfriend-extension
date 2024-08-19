@@ -18,7 +18,7 @@
 	"content_scripts": [
 	  {
 		 "matches": ["https://www.facebook.com/*"],
-		 "js": ["content.js"]
+		 "js": ["unfriend.js","unfollow.js"]
 	  }
 	]
  }

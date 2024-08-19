@@ -1,11 +1,5 @@
-document.getElementById('unfriendButton').addEventListener('click', () => {
+document.getElementById('stopButton').addEventListener('click', () => {
 	chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-	  chrome.tabs.executeScript(tabs[0].id, { file: 'content.js' });
-	});
- });
- 
- document.getElementById('stopButton').addEventListener('click', () => {
-	chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-	  chrome.tabs.executeScript(tabs[0].id, { code: 'stopUnfriending = true;' });
+	  chrome.tabs.executeScript(tabs[0].id, { code: 'stopUnfriending = true; stopUnfollowing = true;' });
 	});
  });
